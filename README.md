@@ -1,9 +1,9 @@
 ## Vanilla Js Projects
 
-# This repo contains js projects form navbar to api serach like anime explorer
+This repository contains a collection of JavaScript projects, ranging from simple navigation bars to more complex applications like an anime search explorer using APIs. These projects are designed to help you sharpen your vanilla JavaScript skills before diving into frameworks, libraries, or backend development.
+## Why Vanilla JavaScript?
 
-# Before diving into JS frameworks/libraries or doing backend stuff its better to sharp your skills in js to gain more knowledeg
-
+Before jumping into JavaScript frameworks or backend technologies, it’s essential to build a solid understanding of pure JavaScript. Mastering the fundamentals will give you a stronger foundation and make it easier to learn advanced concepts later on.
 # Tech use
 
 1. Html
