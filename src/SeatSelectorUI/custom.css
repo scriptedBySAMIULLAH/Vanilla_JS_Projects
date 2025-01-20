@@ -1,0 +1,32 @@
+.rowDiv
+{
+display: flex;
+gap: 2rem;
+justify-content: space-evenly;
+flex-wrap: wrap;
+
+
+}
+
+.seatButton
+{
+
+height: 3rem;
+width: 3rem;
+border: 2px solid rgb(107, 120, 93);
+
+}
+
+.selected
+{
+    border: 2px solid rgb(218, 237, 6);
+}
+
+.screen{
+
+    background: url("https://media.giphy.com/media/10S4rk0J10AKlO/giphy.gif?cid=790b76119ri8shdwyqouuvuxvb1r8dils4e6nxjeetjotzgg&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}

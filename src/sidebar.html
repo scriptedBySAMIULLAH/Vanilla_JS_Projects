@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sidebar</title>
+    <link rel="stylesheet" href="output.css" />
+    <style>
+        .sidebar{
+
+            @media(max-width:300px) {
+                width: 100%;
+                
+            }
+        }
+        
+    </style>
+  </head>
+  <body class="h-screen bg-no-repeat bg-cover bg-center bg-black text-white">
+    <nav class="max-w-6xl px-4">
+      <header class="w-full flex py-2 items-center justify-between ">
+        <div class="w-12 h-12 border border-white flex items-center rounded-full">
+          <img
+            src="https://images.pexels.com/photos/41006/satellite-soyuz-spaceship-space-station-41006.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="LOGO"
+            class="rounded-full w-full h-full"
+          />
+        </div>
+
+        <ul
+          class="hidden sm:flex-row sm:flex items-center gap-2 sm:gap-4 border"
+        >
+          <li class="hover:underline hover:text-yellow-500">Home</li>
+          <li class="hover:underline hover:text-yellow-500">Auto</li>
+          <li class="hover:underline hover:text-yellow-500">Insurance</li>
+          <li class="hover:underline hover:text-yellow-500">Credits</li>
+        </ul>
+
+        <div
+          class="w-fit h-fit  text-4xl sm:hidden hover:cursor-pointer humberger"
+        >
+          <span class="hover:cursor-pointer">&#9776;</span>
+        </div>
+
+        <ul
+        class="hidden transition-transform duration-700 bg-opacity-30 backdrop-blur-xl bg-white/10 sidebar fixed top-0 right-0 flex-col translate-x-full items-center py-20 space-y-4 h-screen  border  z-50 w-2/3"
+      >
+        <div
+          class="w-fit h-fit text-4xl fixed top-5 right-4 hover:cursor-pointer cross z-50 cross cursor-pointer"
+        >
+          <span>&times;</span>
+        </div>
+
+        <li class="hover:underline hover:text-yellow-500  hover:bg-red-300">
+          Home
+        </li>
+        <li class="hover:underline hover:text-yellow-500  hover:bg-red-300">
+          Auto
+        </li>
+        <li class="hover:underline hover:text-yellonw-500  hover:bg-red-300">
+          Insurance
+        </li>
+        <li class="hover:underline hover:text-yellow-500  hover:bg-red-300">
+          Credits
+          </li>
+      </ul>
+      </header>
+
+     
+    </nav>
+  </body>
+
+  <script>
+    
+    let sidebar = document.querySelector(".sidebar");
+    let cross = document.querySelector(".cross");
+    let humberger = document.querySelector(".humberger");
+    // sidebar.style.transition.
+    cross.addEventListener("click", () => 
+    {
+      humberger.classList.toggle("hidden");
+     
+      setTimeout(()=>
+      {
+        sidebar.classList.toggle("hidden");
+        
+
+      },
+      500);// this will execute later
+   
+      sidebar.style.transform='translateX(100%)';//this will executte first 
+      
+
+      sidebar.classList.toggle("flex");
+    
+    
+    }
+  );
+    humberger.addEventListener("click", () => 
+    {
+      humberger.classList.toggle("hidden");
+
+      sidebar.classList.toggle("hidden");
+
+      setTimeout(()=>
+      {
+
+        sidebar.style.transform='translateX(0%)';
+
+      },
+      50);
+      sidebar.classList.toggle("flex");
+    
+    });
+  </script>
+</html>

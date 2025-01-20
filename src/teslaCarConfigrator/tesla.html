@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Configrator</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="custom.css">
+
+</head>
+<body class="relative">
+
+                <!-- liquid bar -->
+        <div id="liquid-bar" class="transition-transform ease-in-out duration-700 bg-gray-100 py-4 m-0 fixed top-0  w-full ">
+            <div class="max-w-4xl  flex mx-auto justify-between items-center w-full font-medium font-roboto px-4">
+                <p>0% APR available for qualified buyers.</p>
+                <div>
+                    <i class="fas fa-chevron-right  text-gray-600 text-lg"></i>
+                </div>
+            </div>
+        </div>        
+            <!-- liquid bar /-->
+
+            <!-- nav -->
+
+            <nav class="flex justify-between px-4 mt-20 sm:mt-16">
+                    <img src="../images/logo.svg" alt="logo" width="120" height="24" class="dark:bg-white">
+             
+                <button id="languages-button">
+                    <i class="fa-solid  fa-globe"></i>
+                    <span>PK</span>
+                </button>
+                
+            </nav>
+            <!-- nav /-->
+
+            <!-- languages -->
+
+            <section id="overlay" class="text-black bg-opacity-35 backdrop-blur-xl bg-black/10 h-screen w-full hidden fixed top-0 right-0 z-30 ">
+
+                <aside class="bg-white px-8 littelsm:px-4    littelsm:w-2/5 text-black bb   h-screen overflow-y-auto fixed right-0 z-50 transition-transform duration-700 translate-x-full space-y-2 space-x-2">
+                    <label class="block mb-2 flex justify-between items-center ">
+                    <strong class="text-nowrap">North America</strong>
+                    <button class="text-4xl   font-bold text-center hover:text-red-700" id="cross">&times;</button>
+                </label>
+                   
+                    
+                        <div class="bg-gray-200  py-2 rounded-md mb-4">
+                            <p class="font-semibold">United States</p>
+                            <p>English</p>
+                        </div>
+                        <strong>South America</strong>
+                        <div  class="hover:bg-gray-200  py-2 rounded-md mb-4">
+                            <p class="font-semibold">Argentina</p>
+                            <p>Spanish</p>
+                        </div>
+                        
+                        <strong>Europe</strong>
+                        <div class="hover:bg-gray-200  py-2 rounded-md mb-4">
+                            <p class="font-semibold">Germany</p>
+                            <p>German</p>
+                        </div>
+                        
+                        <strong>Asia</strong>
+                        <div class="hover:bg-gray-200 py-2 rounded-md mb-4">
+                            <p class="font-semibold">Japan</p>
+                            <p>Japanese</p>
+                        </div>
+                        
+                        <strong>Africa</strong>
+                        <div class="hover:bg-gray-200  py-2 rounded-md mb-4">
+                            <p class="font-semibold">Nigeria</p>
+                            <p>English</p>
+                        </div>
+                        
+                        <strong>Oceania</strong>
+                        <div class="hover:bg-gray-200  py-2 rounded-md mb-4">
+                            <p class="font-semibold">Australia</p>
+                            <p>English</p>
+                        </div>
+                        
+                </aside>
+        </section>
+        <!-- languages /-->
+
+
+            <!-- the main section -->
+
+            <main class="flex flex-col sm:flex-row">
+
+                <section class="images w-full sm:w-[65%] px-1 ">
+
+                        <div class="sticky top-24 py-2 px-2 space-y-2 flex items-center flex-col">
+
+                            <div class="cars exterior overflow-hidden sm:h-72  ">
+                                <img src="../images/model-y-stealth-grey.jpg" alt="Model-Y" class="max-w-full h-auto  transition-transform scale-150 ">
+                                 
+                            </div>
+                        
+                            <div class="interior overflow-hidden sm:h-72">
+                                <img src="../images/model-y-interior-dark.jpg" alt="Model-Y" class="max-w-full transition-transform scale-150  h-auto ">
+                                
+                            </div>
+                        </div>
+                  
+                </section>
+
+                    <aside class="sidebar w-full sm:w-[35%]   flex flex-col">
+                        <h1 class="font-bold text-xl sm:text-4xl text-center">Model-Y</h1>
+                        <h4 class="text-slate-500 text-center">Customize Your Car</h4>
+                        <!-- exterior-buttons -->
+                            <div class="colors mt-4 space-x-2 px-2 sm:space-y-0 space-y-2 exterior-buttonDiv">
+                                <h5 class="font-bold mb-2">Exterior Colors</h5>
+                                <button class="transition-transform  hover:scale-105 ">
+                                    <img src="../images/button-deep-blue-metallic.avif" class="w-10" alt="deep-blue-metallic">
+                                </button>   
+                                <button class="transition-transform hover:scale-105">
+                                    <img src="../images/button-stealth-grey.avif" class="w-10 " alt="stealth-grey">
+                                </button>
+                                <button class="transition-transform hover:scale-105">
+                                    <img src="../images/button-pearl-white.avif" class="w-10" alt="pearl-white">
+                                </button>
+                                <button class="transition-transform hover:scale-105">
+                                    <img src="../images/button-quicksilver.avif" class="w-10" alt="quick-silver">
+                                </button>
+                                <button class="transition-transform hover:scale-105 btn-selected">
+                                    <img src="../images/button-solid-black.avif" class="w-10 " alt="solid-black">
+                                </button>
+                                <button class="transition-transform hover:scale-105 ">
+                                    <img src="../images/button-ultra-red.avif" class="w-10" alt="ultra-red">
+                                </button>
+
+                            </div>
+                            <!-- exterior-buttons /-->
+
+                            <!-- interior color -->
+
+                            <div class=" mt-4 space-x-2 px-2 interior-buttonDiv">
+                                <h5 class="font-bold mb-2">Interior Colors</h5>
+                                <button class="transition-transform hover:scale-105 btn-selected">
+                                    <img src="../images/button-dark.avif" class="w-10" alt="button-dark">
+                                </button>
+                                <button class="transition-transform hover:scale-105">
+                                    <img src="../images/button-light.avif" class="w-10" alt="button-light">
+                                </button>
+                            </div>
+                            <!-- interior color /-->
+
+
+                            <!-- wheels -->
+                            <div class="px-2 space-y-2 wheels-btns mb-2">
+                                <p class="font-bold ">Wheels</p>
+
+                                <button class="px-2 py-2 text-center bg-gray-600 hover:bg-gray-700   duration-200 text-white w-full font-semibold">
+                                    Standard Wheels
+                                </button>
+
+
+                                <button id="performance-Button" class="px-2 py-2 text-center bg-gray-200  w-full font-semibold hover:bg-gray-400">
+                                    Performance Wheels(+2,500$)
+                                </button>
+                            </div>
+
+
+                            <!-- wheels /-->
+
+
+                            <!-- full delf driving card -->
+
+                            <div class="mt-4 mb-4 border border-gray-500 shadow-md rounded py-4 mx-2 px-2 ">
+                                <h3 class="font-bold ">Full Self-Driving </h3>
+                                <input type="checkbox" name="self-Driving-checkBox" id="self-Driving-checkBox" class="h-4 w-4 m-0">
+                                <span>Add full self driving for 8,500$</span>
+                            </div>
+                            <!-- full delf driving card/ -->
+
+
+                            <!-- performance Package -->
+
+                            <div class="px-2 mb-4">
+
+                                <h3 class="font-bold mb-2">Performance Package</h3>
+                                <button class=" performance-Upgrade py-2 font-semibold w-full bg-gray-200 rounded hover:bg-gray-500 hover:text-white">Performance Upgrade (+$5,000)</button>
+                            </div>
+                            <!-- performance Package /-->
+
+                            <!-- Accessories -->
+
+                            <div class="px-2 mb-4">
+                                <h3 class="font-bold mb-2">Accessories</h3>
+                                <label class="mb-2  flex justify-between items-center py-2 rounded border border-gray-500  px-1">
+                                    <span>Center Console Tray</span>
+                                        <span class="flex items-center space-x-1 justify-center">
+                                            <input type="checkbox" class="accessories-Checkbox h-4 w-4" name="Center Console Tray">
+                                            <span>$35</span>
+                                        </span>
+                                </label>
+
+                                <label class="mb-2  flex justify-between items-center py-2 rounded border border-gray-500  px-1">
+                                    <span>SunShade</span>
+                                        <span class="flex items-center space-x-1 justify-center">
+                                            <input type="checkbox" class="accessories-Checkbox h-4 w-4" name="SunShade">
+                                            <span>$10</span>
+                                        </span>
+                                </label>
+
+                                <label class="mb-2  flex justify-between items-center py-2 rounded border border-gray-500  px-1">
+                                    <span>All-wheather Interior Liners</span>
+                                        <span class="flex items-center space-x-1 justify-center">
+                                            <input type="checkbox" class="accessories-Checkbox h-4 w-4" name="All-wheather Interior Liners">
+                                            <span>$23</span>
+                                        </span>
+                                </label>
+                            </div>
+                            <!-- Accessories /-->
+
+                            <!-- total Price -->
+
+                            <div class="mb-4 px-2">
+                            <span class="block font-semibold">Total Price</span>
+                            <p class="font-bold font-black" id="total-price" >$52,000</p>
+
+                            </div>
+                            <!-- total Price /-->
+
+                            <!-- payment -->
+                             <div class="mb-2 px-2">
+
+                                <p class="font-semibold mb-2">Estimated Payment Breakdown</p>
+                                <p>Down-Payment:
+                                     <span id="down-payment" class="font-semibold">
+                                        $8500
+                                    </span>
+                                </p>
+                                <p>Loan Term:
+                                     <span class="font-semibold">
+                                        60 Months
+                                    </span>
+                                </p>
+                                <p>Intrest Rate:
+                                     <span class="font-semibold">
+                                        3% APR
+                                    </span>
+                                </p>
+                                <p>Estimated Monthly-Payment:
+                                    <span id="monthly-payment" class="font-bold text-lg">
+                                       $818.55
+                                   </span>
+                               </p>
+                             </div>
+
+                            
+                            <!-- payment/ -->
+
+
+
+                    </aside>
+            </main>
+            <!-- the main section/ -->
+
+           
+            
+
+            <script src="script.js"></script>
+
+</body>
+
+</html>

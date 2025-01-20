@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bb{
+
+    @apply
+    border border-black
+}
+.bw{
+
+    @apply
+    border 
+}
+
+.in
+{
+    @apply
+    border border-purple-800 border-x-4 border-y-4
+}
+.out
+{
+    @apply
+    border border-red-800 border-x-4 border-y-4
+}
+
+.min{
+    @apply
+    border border-x-2 border-y-2 border-green-700
+}
+
+.btn{
+    @apply
+    bg-transparent p-2 text-center border rounded-md hover:bg-orange-500 font-semibold
+}
+

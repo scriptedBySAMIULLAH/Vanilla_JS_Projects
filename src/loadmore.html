@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>load more</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-black text-white h-screen">
+    <div class="wrapper h-fit w-full border flex flex-col justify-between items-center">
+
+    </div>
+    
+    
+    <div>
+      <button class="btn">Load more</button>
+    </div>
+  </body>
+
+  <script>
+    const batmanImageArray = [
+      "https://images.pexels.com/photos/34950/pexels-photo.jpg",
+      "https://images.pexels.com/photos/318419/pexels-photo-318419.jpeg",
+      "https://images.pexels.com/photos/167588/pexels-photo-167588.jpeg",
+      "https://images.pexels.com/photos/3538765/pexels-photo-3538765.jpeg",
+      "https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg",
+      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg",
+      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg",
+      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg",
+      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg",
+      "https://images.pexels.com/photos/3538765/pexels-photo-3538765.jpeg",
+    ];
+
+    let start = 2,
+      end = 0,
+      container = document.querySelector(".wrapper"),
+      length = batmanImageArray.length,
+      btn=document.querySelector(".btn")
+    console.log(length);
+
+    btn.addEventListener("click", loadMore);
+
+    function loadMore() {
+      if (end <= length) {
+        for (let i = start; i > end; i--) {
+          let batman = batmanImageArray[i];
+          let image = document.createElement("img");
+
+          image.setAttribute("src", batman);
+          image.style.maxHeight='20vw'
+          image.style.maxWidth='20vw'
+
+          container.append(image);
+        }
+        end = start;
+        if(start<length){
+            start += 2;
+
+
+        }
+        if(end>=length){
+            btn.classList.add('hidden')
+
+
+        }
+
+        console.log(end);
+        console.log(start);
+      }
+    }
+
+    loadMore();
+  </script>
+</html>

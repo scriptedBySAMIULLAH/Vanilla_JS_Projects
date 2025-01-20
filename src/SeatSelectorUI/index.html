@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat_Selection</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-black  h-screen">
+   
+    
+    <section  class=" flex items-center flex-col space-y-4 sm:space-y-4   w-full h-full   ">
+    <div class="seatStatusShow flex items-center gap-2 justify-center mt-1">
+       
+        <label class=" flex items-center flex-col text-white tracking-tighter text-base">
+            <i class="fas fa-chair text-white text-center border  border-green-600 p-3 shadow-lg bg-gradient-to-r from-green-500 to-green-600"></i>
+            <p>Available</p>
+        </label>
+       
+        <label class="  flex items-center flex-col text-white tracking-tighter text-base">
+            <i class="fas fa-chair text-red-500 text-center border p-3 border-gray-400 shadow-lg bg-gradient-to-r from-red-500 to-red-600 text-white"></i>
+            <p>Sold</p>
+        </label>
+        <label class="  flex items-center flex-col text-white tracking-tighter text-base">
+            <i class="fas fa-crown text-yellow-800 text-center border p-3 border-yellow-500 shadow-lg bg-gradient-to-r from-yellow-200 to-yellow-400"></i>
+            <p>VIP</p>
+        </label> 
+    </div>
+    <div class="text-white flex gap-2  items-center">
+        <label for="movies" class="font-semibold tracking-tight font-bold  text-base sm:text-xl">Select your favourite movie</label>
+        <select name="movies" class="movies text-black p-1 rounded-md right-2 ring-orange-400" id="movies">
+            <option value="minions">Minions</option>
+            <option value="panda">Kung fu panda</option>
+            <option value="babyBoss">Baby Boss</option>
+            <option value="toyStory">Toy Story</option>
+        </select>
+    </div>
+
+        <div class="screen w-64  h-52 littelsm:w-80 littelsm:h-56  border shadow-xl shadow-white outline-white bg-cover bg-center bg-no-repeat rounded-lg relative p-2 ">
+            <div class="overlay absolute inset-0 bg-black rounded-lg bg-opacity-30"></div>
+            <div class="for-text z-50 relative">
+            <label class="block text-center font-bold  font-roboto py-2 text-xl text-white tracking-tighter leading-tight" >
+                Seleceted Seats:&nbsp;<span class="selectedSeats text-white">0</span>
+            </label>    
+            <label class="block text-center font-semibold font-roboto py-2 text-lg tracking-tighter leading-tight text-white" >
+                Price:&nbsp;<span class="price">0</span>
+            </label>
+        </div>
+        </div>
+<!-- data from js -->
+       <div class="seats grid  gap-1 sm:rowDiv littelsm:gap-2  littelsm:grid-cols-1">
+       </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-black h-screen">
+    <header
+      class="container h-screen relative max-w-7xl overflow-hidden bg-black bg-opacity-50"
+    >
+      <!-- video container -->
+      <div class="absolute -z-50">
+        <video
+          src="./videos/5040711-hd_1920_1080_30fps.mp4"
+          class="h-auto w-full"
+          loop
+          autoplay
+          id="video"
+        ></video>
+      </div>
+      <!-- text container -->
+
+      <div class="absolute h-full w-full flex items-center justify-center">
+        <p
+          class="text-center text-base sm:text-4xl font-bold font-mono text-slate-300 w-full"
+        >
+          A Stunning Sky
+      </p>
+        <button
+          class="text-white font-bold absolute bottom-0 right-0 border px-4 py-2 rounded-full btn"
+        >
+          Pause
+        </button>
+      </div>
+    </header>
+  </body>
+
+  <script>
+    let video = document.getElementById("video");
+
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", (e) => {
+      let text = e.target.innerText;
+      console.log(text);
+
+      if (text === "Pause") {
+        e.target.innerText = "Play";
+        video.pause();
+      } else {
+        e.target.innerText = "Pause";
+        video.play();
+      }
+    });
+  </script>
+</html>

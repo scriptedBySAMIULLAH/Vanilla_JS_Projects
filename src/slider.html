@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-black text-white flex items-center flex-col justify-center h-screen">
+    
+
+            <section class="container relative border border-x-red-900 border-y-4 border-x-4 border-y-red-800 mt-16 max-w-sm w-full max-h-60  overflow-hidden relative">
+
+                <img src="./images/pexels-pincalo-15030781.jpg" alt="img" class="object-cover w-full h-full imgs transition-transform duration-700 ">
+                <img src="./images/pexels-minan1398-813269.jpg" alt="img" class="object-cover w-full imgs h-full transition-transform duration-700   translate-x-full">
+                <img src="./images/pexels-jack-atkinson-1289771108-25935100.jpg" alt="img" class="object-cover w-full imgs h-full  transition-transform duration-700 translate-x-full">
+                <img src="./images/pexels-daroon-20708902.jpg" alt="img" class="object-cover w-full imgs h-full transition-transform duration-700 translate-x-full">
+            </section>
+            <div>
+              <button id="Previous" class="hidden">Previous</button>
+              <button id="Next" >Next</button>
+                
+            </div>
+</body>
+
+        <script>
+
+     let images=  document.querySelectorAll('.imgs'),
+         Next=document.getElementById('Next'),
+         Pre=document.getElementById('Previous'),
+         currentIndex=0;
+        let imagesArray= Array.from(images);
+          Next.addEventListener('click',()=>
+        {
+        
+         
+          if (currentIndex<imagesArray.length-1)
+           {
+            imagesArray[currentIndex].classList.toggle('translate-x-full');
+            imagesArray[currentIndex].classList.toggle('absolute'); 
+            imagesArray[currentIndex].classList.toggle('top-0');
+            currentIndex++;
+            imagesArray[currentIndex].classList.toggle('translate-x-full'); 
+           
+            imagesArray[currentIndex].classList.toggle('absolute'); 
+            imagesArray[currentIndex].classList.toggle('top-0'); 
+         
+              
+          }
+          checkStatus(currentIndex)
+          
+        })
+        Pre.addEventListener('click',()=>
+        {
+        
+          if (currentIndex>0) {
+            imagesArray[currentIndex].classList.toggle('translate-x-full');
+            imagesArray[currentIndex].classList.toggle('absolute');
+            imagesArray[currentIndex].classList.toggle('top-0');
+              currentIndex--;
+              imagesArray[currentIndex].classList.toggle('translate-x-full');
+              imagesArray[currentIndex].classList.toggle('absolute');
+              imagesArray[currentIndex].classList.toggle('top-0');
+        
+            
+          } 
+          checkStatus(currentIndex)
+        })
+
+        function checkStatus(currentIndex)
+          {
+
+            Pre.classList.toggle('hidden',currentIndex==0)
+            Next.classList.toggle('hidden',currentIndex==imagesArray.length-1)
+          }
+  
+        </script>
+</html>

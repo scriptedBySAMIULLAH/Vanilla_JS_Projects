@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <link href="./output.css" rel="stylesheet">
+  </head>
+  <body class="h-screen  relative bg-center bg-no-repeat bg-cover   "  style="background-image: url(./images/pexels-pincalo-15030781.jpg);">
+      
+            <button class="btn text-xl font-bold text-white border bg-transparent px-4 py-2 text-center">get image</button>
+
+        <section class="modal hidden h-full border flex flex-col items-center justify-center outer bg-blend-overlay bg-black/5 ">
+                    
+            
+                <div class=" max-w-sm border shadow-lg rounde-md p-4 max-h-42 relative">
+                    <button class="text-4xl absolute top-0 right-0 text-black font-bold cross">&times;</button>
+
+                    <img src="https://picsum.photos/200/300" alt="Random Image" class="object-cover rounde-md" />
+                </div>
+
+
+
+        </section>
+  </body>
+
+  <script>
+
+    let modal=document.querySelector('.modal')
+    let cross=document.querySelector('.cross')
+    let btn=document.querySelector('.btn')
+
+    btn.addEventListener('click',function(e)
+    {
+
+        e.target.nextElementSibling.classList.toggle('hidden')
+        
+        
+
+    })
+    cross.addEventListener('click',function(e)
+    {
+        console.log('inn');
+        
+
+        e.target.parentElement.parentElement.classList.toggle('hidden')
+
+    })
+    modal.addEventListener('click',function(e)
+    {
+       if(e.target===e.currentTarget){
+
+        e.currentTarget.classList.toggle('hidden')
+
+       }
+
+    
+    
+     
+      
+
+    },true)
+
+
+  </script>
+
+ 
+</html>

@@ -1,0 +1,14 @@
+.content{
+
+    display: none;
+}
+
+.active{
+
+    display: block;
+}
+
+.active-btn{
+    background: #ffff;
+    outline-style:groove;
+}

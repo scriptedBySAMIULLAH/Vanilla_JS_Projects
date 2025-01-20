@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="./custom.css"/>
+  </head>
+  <body
+    class="h-[100vh] bg-black bg-opacity-25  text-white px-2"
+  >
+   
+    <section
+      class="h-full w-full grid sm:grid-cols-2 grid-cols-1 items-center place-items-center mt-2 px-2 "
+    >
+      <div class="img hidden sm:block bg-white rounded-md p-2 w-64 bg-opacity-15 ">
+        <img
+          src="../images/pexels-jack-atkinson-1289771108-25935100.jpg"
+          alt="img"
+          class="h-auto max-w-full object-cover block rounded-md"
+        />
+      </div>
+
+      <article class="wrpper   bg-slate-100 p-4 space-y-2">
+
+        <!-- btns -->
+        <div class="btn-container w-full flex justify-center space-x-2  text-black text-center">
+          <button class="tab-btn  rounded-md px-2 py-1 text-center active-btn" data-id="visions">Visions</button>
+          <button class="tab-btn rounded-md px-2 py-1 text-center bg-cyan-100 " data-id="goal">Goal</button>
+          <button class="tab-btn rounded-md px-2 py-1 text-center bg-cyan-100 " data-id="hiatory">History</button>
+        </div>
+
+        <!-- content -->
+        <div class="content-container  bg-white text-black">
+          <div class="content  rounded-lg bb p-2 text-center active" id="visions">
+           <h1>
+            Visions
+           </h1> 
+           <p>
+            It had been a rough day. Things hadn't gone as planned and that meant Hannah got yelled at by her boss. It didn't even matter that it wasn't her fault. When things went wrong at work, Hannah got the blame no matter the actual circumstances. It wasn't fair, but there was little she could do without risking her job, and she wasn't in a position to do that with the plans she had.
+           </p>
+        </div>
+          <div class="content rounded-md p-2 text-center bb " id="goal">
+            <h1>
+                Goal
+            </h1>
+            <p>
+                It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a project where blocks of text are needed, this tool can be a great way to get that. It's a good way to test your programming and that the tool being created is working well. 
+            </p>
+        </div>
+          <div class="content rounded-md p-2 text-center bb" id="hiatory">
+           <h1>
+            History
+           </h1>
+           <p>There are usually about 200 words in a paragraph, but this can vary widely. Most paragraphs focus on a single idea that's expressed with an introductory sentence, then followed by two or more supporting sentences about the idea. A short paragraph may not reach even 50 words while long paragraphs can be over 400 words long, but generally speaking they tend to be approximately 200 words in length.</p>
+        </div>
+        </div>
+      </article>
+    </section>
+  </body>
+  <script src="./app.js"></script>
+</html>

@@ -1,0 +1,22 @@
+.btn-selected{
+
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 2px;
+}
+.btn-selected:hover{
+
+    transform: scale(1) !important;
+}
+
+
+.show-bar{
+
+    transform: translateY(0);
+
+}
+
+.hide-bar{
+    transform: translateY(-100%);
+}
+

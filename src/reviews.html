@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reviews</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-black text-white h-screen">
+    <section
+      class="h-full border flex flex-col items-center justify-center border"
+    >
+      <div
+        class="card max-w-md shadow-red-600 shadow-md rounded flex flex-col items-center px-4 py-4 border border-red-500 bg-transparent bg-opacity-30 bg-white/10"
+      >
+        <img
+          src="./images/pexels-minan1398-813269.jpg"
+          alt="img"
+          class="w-16 h-16 rounded-full border"
+
+          id="img"
+        />
+        <p class="text-lg font-bold"
+        id="name">Sara Jones</p>
+        <p class="text-sm font-light text-blue-400"
+        id="role">UX-designer</p>
+        <p class="text-slate-500"
+        id="about">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error iure
+          dolorem eligendi, sunt numquam repellendus quaerat, eos libero maiores
+          tenetur ipsam quisquam similique voluptates iusto commodi sed aut
+          animi quos.
+        </p>
+        <div
+          class="buttons flex gap-4 text-yellow-300 w-full justify-around mt-4"
+        >
+          <button class="btn" id="left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="btn" id="right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+   const cardData = [
+  {
+    name: "Sara Jones",
+    role: "UX-designer",
+    image: "https://images.pexels.com/photos/1398/pexels-minan1398-813269.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error iure dolorem eligendi, sunt numquam repellendus quaerat, eos libero maiores tenetur ipsam quisquam similique voluptates iusto commodi sed aut animi quos.",
+  },
+  {
+    name: "John Smith",
+    role: "Web Developer",
+    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+    description:
+      "Passionate web developer with experience in building responsive and interactive websites.",
+  },
+  {
+    name: "Emily Davis",
+    role: "Graphic Designer",
+    image: "https://images.pexels.com/photos/1660976/pexels-photo-1660976.jpeg",
+    description:
+      "Creative graphic designer specializing in branding and visual communication.",
+  },
+  {
+    name: "Michael Brown",
+    role: "Product Manager",
+    image: "https://images.pexels.com/photos/3184390/pexels-photo-3184390.jpeg",
+    description:
+      "Results-driven product manager with a focus on user experience and market trends.",
+  },
+  {
+    name: "Laura Wilson",
+    role: "Content Writer",
+    image: "https://images.pexels.com/photos/1239295/pexels-photo-1239295.jpeg",
+    description:
+      "Skilled content writer with a passion for storytelling and creating engaging content.",
+  },
+];
+
+
+      let currentIndex=0;
+
+      let img=document.getElementById('img')
+
+      let name=document.getElementById('name')
+
+      let role=document.getElementById('role')
+
+      let about=document.getElementById('about')
+
+      let persons=cardData;
+      let length=persons.length
+
+    document.getElementById('left').addEventListener('click',()=>
+        {
+          
+         
+            if(currentIndex>0)
+            {
+              if(currentIndex==length)
+              {
+                currentIndex-=2;
+                console.log(currentIndex);
+
+                persons=cardData[currentIndex];
+                name.innerText=`${persons.name}`
+                img.setAttribute('src',`${persons.image}`)
+                about.innerText=`${persons.description}`
+                role.innerText=`${persons.role}`
+
+              }
+              else{
+              
+                currentIndex--;
+                persons=cardData[currentIndex];
+
+                name.innerText=`${persons.name}`
+                img.setAttribute('src',`${persons.image}`)
+                about.innerText=`${persons.description}`
+                role.innerText=`${persons.role}`
+               
+                
+            }
+          }
+        })
+
+
+   document.getElementById('right').addEventListener('click',()=>
+        {
+            
+            if(currentIndex<length){
+
+                currentIndex++;
+                console.log(currentIndex  + "inner");
+            }
+           
+            // console.log(currentIndex);
+            if(currentIndex<length)
+            {
+               persons=cardData[currentIndex];
+               console.log(persons);
+
+                img.setAttribute('src',`${persons.image}`)
+               name.innerText=`${persons.name}`
+               role.innerText=`${persons.role}`
+               about.innerText=`${persons.description}`
+               
+              
+               
+            }
+        })
+   
+
+  </script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nav</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-slate-200">
+    <nav class="px-4 w-full h-fit nav ">
+      <div
+        class="max-w-7xl bg-cyan-800 mx-auto flex justify-between items-center h-full w-full px-2"
+      >
+        <div class="w-fit h-fit">
+          <img
+            src="./images/pexels-minan1398-813269.jpg"
+            alt=""
+            class="w-12 h-12 rounded-full"
+          />
+        </div>
+        <ul class="hidden  sm:flex w-full sm:justify-evenly sm:items-center">
+          <li
+            class="hover:text-blue-900 hover:underline cursor-pointer dark:text-white"
+          >
+            Home
+          </li>
+          <li
+            class="hover:text-blue-900 hover:underline cursor-pointer dark:text-white"
+          >
+            Auto
+          </li>
+          <li
+            class="hover:text-blue-900 hover:underline cursor-pointer dark:text-white"
+          >
+            Insurance
+          </li>
+          <li
+            class="hover:text-blue-900 hover:underline cursor-pointer dark:text-white"
+          >
+            Credits
+          </li>
+        </ul>
+        <div
+          class="text-4xl cursor-pointer sm:hidden text-yellow-300 mobile h-fit w-fit"
+        >
+          <span>&#9776;</span>
+        </div>
+      </div>
+      <ul
+        class="hidden  bg-opacity-30 backdrop-blur-xl bg-black humberger items-center justify-center flex-col space-y-6 text-white gap-4"
+      >
+      <li class="hover:text-blue-900 hover:underline cursor-pointer ">
+        Home
+      </li>
+      <li class="hover:text-blue-900 hover:underline cursor-pointer ">
+        Auto
+      </li>
+        <li class="hover:text-blue-900 hover:underline cursor-pointer ">
+          Insurance
+        </li>
+        <li class="hover:text-blue-900 hover:underline cursor-pointer ">
+          Credits
+        </li>
+      </ul>
+    </nav>
+  </body>
+
+  <script>
+    document.querySelector(".mobile").addEventListener("click", (e) => {
+      let humberger = document.querySelector(".humberger");
+      humberger.classList.toggle("hidden");
+      humberger.classList.toggle("flex");
+    
+      let span = e.target;
+
+      if (span.innerText === "☰") {
+        
+        span.innerText = "x";
+        
+      } else {
+       
+        span.innerText = "☰";
+      }
+    });
+  </script>
+</html>
