@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./custom.css">
+    <!-- <script src="./app.js" defer></script> -->
+    <link rel="stylesheet" href="../output.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body class="h-[100vh] bg-gradient-to-br from-[#ff9a9e] to-[#fad0c4]">
+    <div class="text-center   flex flex-col items-center flex-wrap h-full justify-center sm:flex-row sm:justify-around sm:h-fit">
+        <div class="status flex flex-col sm:flex-row sm:justify-center flex-wrap   items-center">
+            <span class="font-bold text-4xl text-white">Turn:</span>
+            <div class="p1 font-bold text-4xl p-2 rounded-lg  ">X</div>
+            <div class="p2 font-bold text-4xl p-2 rounded-lg current">0</div>
+        </div>
+        <div class="winCount flex flex-col sm:flex-row sm:justify-center flex-wrap  items-center gap-4">
+            <span class="font-bold text-4xl text-white">Wins:</span>
+            <div class="p1 font-bold text-4xl p-2 rounded-lg text-red-600">X:- 
+                <span class="p1_wins text-white">0</span>
+            </div>
+            <div class="p2 font-bold text-4xl p-2 rounded-lg text-red-600">0:-
+                <span class="p2_wins text-white">0</span>
+            </div>
+        </div>
+
+        <div class="p1 font-bold text-4xl p-2 rounded-lg">Draws: 
+            <span class="draws">0</span>
+        </div>
+
+        
+     </div>
+    <div class="grid-container   sm:container flex flex-wrap flex-col justify-center items-center m-auto gap-2 ">
+    
+       
+    </div>
+   <div class="text-center  mt-4 w-fit m-auto rounded rounded-full bg-[#bfd8a5] text-black">
+    <button class="reset  px-2  py-2 ">Reset Game</button>
+   </div>
+
+ 
+</body>
+<script src="./app.js"></script>
+</html>
