@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css">
+    <title>Shopping cart</title>
+</head>
+<body class="bg-black  font-poppins">
+  <header class="border border-red-300">
+    <nav class="max-w-7xl m-auto text-white border flex justify-around items-center">
+     <h1>Your First Shop</h1>
+     <h2 class="text-lg font-semibold text-white uppercase tracking-wider relative ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="showCart cursor-pointer" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFF55"><path d="M284.53-80.67q-30.86 0-52.7-21.97Q210-124.62 210-155.47q0-30.86 21.98-52.7Q253.95-230 284.81-230t52.69 21.98q21.83 21.97 21.83 52.83t-21.97 52.69q-21.98 21.83-52.83 21.83Zm400 0q-30.86 0-52.7-21.97Q610-124.62 610-155.47q0-30.86 21.98-52.7Q653.95-230 684.81-230t52.69 21.98q21.83 21.97 21.83 52.83t-21.97 52.69q-21.98 21.83-52.83 21.83ZM238.67-734 344-515.33h285.33l120-218.67H238.67ZM206-800.67h589.38q22.98 0 34.97 20.84 11.98 20.83.32 41.83L693.33-490.67q-11 19.34-28.87 30.67-17.87 11.33-39.13 11.33H324l-52 96h487.33V-286H278q-43 0-63-31.83-20-31.84-.33-68.17l60.66-111.33-149.33-316H47.33V-880h121.34L206-800.67Zm138 285.34h285.33H344Z"/></svg>
+      <span class="inline-block absolute bg-yellow-100 text-black top-0 right-0 rounded-full font-roboto text-base lowercase font-normal tracking-normal px-1 items-count"></span>
+    </h2>
+    
+    </svg>
+    </nav>
+  </header>
+  <!-- nav ends -->
+  <div class="spinner fixed inset-0  flex items-center justify-center ">
+    <div id="spinner" role="status" class="fixed">
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin: auto; background: none;" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <circle cx="50" cy="50" r="40" stroke="#EA3323" stroke-width="6" fill="none" stroke-linecap="round">
+            <animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="0 250;150 250;150 250;0 250" keyTimes="0;0.5;0.75;1"></animate>
+            <animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" values="0;-75;-150;-225" keyTimes="0;0.5;0.75;1"></animate>
+            <animateTransform attributeName="transform" type="rotate" dur="1.5s" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+            </circle>
+        </svg>
+      <span class="sr-only">Loading...</span>
+         </div>
+</div>
+
+<!-- spinner ends -->
+
+    <div class="container m-auto hidden">
+     
+        <div class="grid_container m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+           
+          </div>
+          
+    </div>
+<!-- cards  ends -->
+    <div class="cart w-full sm:w-[35%] text-white fixed top-0 right-0  h-screen bg-opacity-15 backdrop-blur-xl p-2 overflow-y-auto hide-cart transition-transform duration-700  ease-in-out">
+      
+      <div class="flex justify-between items-center border-b "> 
+        <div class=" bg-white text-black px-2 rounded border-gray-300 transition duration-300 hover:bg-slate-200">
+          <button class="clearCart">Clear Cart</button>
+        </div>
+
+        <div class="total-price">
+          <h2 class="font-bold"></h2>
+        </div>
+        <button class="text-gray-300 hover:text-white transition duration-200 text-2xl closeCart">&times;</button>
+        
+      </div>
+
+      <!-- <div class="w-full cartElement flex items-center justify-around bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-3 shadow-md mt-1">
+
+        <img src="./placeholder.bmp" alt="image" class="rounded-full w-16 h-16">
+        <p class="title">Shirt pant</p>
+        <div class="counters flex gap-2 ">
+          <span class="decrease cursor-pointer inline-block px-2  bg-red-100 rounded-md text-black font-semibold font-black"> +</span>
+          <span class="value"> 0 </span>
+          <span class="increase cursor-pointer inline-block px-2  bg-green-100 rounded-md text-black font-semibold font-black"> - </span>
+        </div>
+      </div> -->
+
+     
+    </div>
+    <!-- cart ends -->
+</body>
+<script  src="./app.js"></script>
+</html>

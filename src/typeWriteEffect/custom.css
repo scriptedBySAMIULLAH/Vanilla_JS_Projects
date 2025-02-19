@@ -1,0 +1,31 @@
+body{
+
+    background-color: black;
+    color:white;
+    font-size: large;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+  }
+
+#typewriter::after {
+    content: "|";
+    animation: blink 0.9s infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+ 
