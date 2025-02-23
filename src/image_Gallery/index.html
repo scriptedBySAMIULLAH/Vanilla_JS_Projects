@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css" />
+    <script src="./script.js" defer></script>
+    <title>Image Gallery</title>
+  </head>
+  <body class="bg-black">
+    <main
+      class="max-w-md border border-gray-300 p-4 mx-auto rounded-lg shadow-lg overflow-hidden"
+    >
+      <div class="image_container  overflow-hidden rounded-md overflow-hidden max-h-[300px]">
+        <img src="https://cdn.pixabay.com/photo/2024/06/22/16/55/ai-generated-8846672_1280.jpg" id="current" class="h-auto w-full object-cover " />
+      </div>
+    </main>
+    <div class="images mt-4 rounded-md p-4 justify-between border border-slate-50 gap-4 bg-slate-50  flex   m-auto overflow-x-auto snap-x snap-mandatory  scroll-smooth ">  
+    </div>
+  </body>
+</html>
