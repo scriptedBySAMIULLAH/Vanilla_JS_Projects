@@ -3,35 +3,20 @@
 @tailwind utilities;
 
 
-.bb{
+.input-field{
 
-    @apply
-    border border-black
+    @apply p-2 rounded-md
 }
-.bw{
-
-    @apply
-    border 
-}
-
-.in
-{
-    @apply
-    border border-purple-800 border-x-4 border-y-4
-}
-.out
-{
-    @apply
-    border border-red-800 border-x-4 border-y-4
-}
-
-.min{
-    @apply
-    border border-x-2 border-y-2 border-green-700
-}
-
+h2 {
+    @apply text-white font-thin sm:font-bold  text-sm sm:text-lg;
+  }
 .btn{
-    @apply
-    bg-transparent p-2 text-center border rounded-md hover:bg-orange-500 font-semibold
+
+    @apply text-center border border-white px-4 py-2 text-white rounded-md hover:bg-orange-400
+}
+
+label{
+
+    @apply text-white font-medium 
 }
 

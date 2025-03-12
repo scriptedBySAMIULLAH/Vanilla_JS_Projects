@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="customcss.css">
+    <script src="./app.js" defer></script>
+    <script src="./iconScript.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Multi step Form</title>
+    
+</head>
+<body class=" bg-black">
+            <section class="min-h-screen space-y-8 p-2 overflow-hidden">
+                <div class="mb-4 text-white  gap-4 text-center flex flex-col sm:flex-row sm:justify-around items-center">
+                   
+                        <div class="relative step-indicator">
+                            <i data-lucide="car" class="hidden sm:inline-block indicator text-pink-400 w-10 h-10 absolute left-0 top-4 transition-transform  duration-700 delay-150 translate-x-0"></i>
+                            <h2> Basic Information</h2>
+                        </div>
+                        <div>
+                            <h2> Preferences & Choices</h2>
+                            
+                        </div>
+                        <div>
+                            <h2>Security & Authentication</h2>
+                        </div>
+                </div>
+
+                <form class="max-w-lg mx-auto flex flex-col border border-pink-800 w-full p-6 bg-white/10 rounded-lg shadow-lg backdrop-blur-md space-y-4">
+                    <!-- Step 1: Basic Information -->
+                    <div data-step="1" class="step space-y-4">
+                        <h2 class="text-white">Basic Information</h2>
+                        <div class="flex flex-col">
+                            <label for="name" class="">Full Name</label>
+                            <input type="text" id="name" name="name" class="input-field" placeholder="Enter your full name">
+                            <span class="name-error err" ></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="email" class="">Email Address</label>
+                            <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email" autocomplete="off">
+                            <span class="email-error err"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="phoneNumber" class="">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="input-field" placeholder="Enter your phone number">
+                            <span class="phoneNumber-error err"></span>
+                        </div>
+                    </div>
+                
+                    <!-- Step 2: Preferences & Choices -->
+                    <div data-step="2" class="step space-y-4 ">
+                        <h2 class="">Preferences & Choices</h2>
+                        <div class="flex flex-col">
+                            <label for="preferredContactMethod" class="">Preferred Contact Method</label>
+                            <select id="preferredContactMethod" name="preferredContactMethod" class="input-field">
+                                <option value="">Select...</option>
+                                <option value="Call">Call</option>
+                                <option value="Email">Email</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                            </select>
+                            <span class="preferredContactMethod-error err"></span>
+                        </div>
+                        <fieldset class="space-y-2">
+                            <legend class="text-white">Are you a student or working professional?</legend>
+                            <div class="flex items-center space-x-4">
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" id="student" name="profession" value="Student" class="radio">
+                                    <span>Student</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" id="working" name="profession" value="Working Professional" class="radio">
+                                    <span>Working Professional</span>
+                                </label>
+                            </div>
+                            <span class="profession-error err"></span>
+                        </fieldset>
+                    </div>
+                
+                    <!-- Step 3: Security & Authentication -->
+                    <div data-step="3" class="step space-y-4">
+                        <h2 class="">Security & Authentication</h2>
+                        <div class="flex flex-col">
+                            <label for="password" class="">Create a Password</label>
+                            <input type="password" id="password" name="password" class="input-field" placeholder="Enter password">
+                            <span class="password-error err"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="confirmPassword" class="">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="input-field" placeholder="Confirm password">
+                            <span class="confirmPassword-error err"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="pin" class="">Enter Personal PIN</label>
+                            <input type="number" id="pin" name="pin" class="input-field" placeholder="4-digit PIN">
+                            <span class="pin-error err"></span>
+                        </div>
+                    </div>
+                
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-4 btns">
+                        <button type="button" class="prevBtn btn hidden" id="prevBtn">Previous</button>
+                        <button type="button" class="nextBtn btn" id="nextBtn">Next</button>
+                        <button type="submit" class="submitBtn btn hidden" >Submit</button>
+                    </div>
+                </form>
+                
+                    
+            </section>
+</body>
+
+</html>
