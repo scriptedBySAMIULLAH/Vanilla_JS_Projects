@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="../output.css">
+    <title>Drag and drop</title>
+</head>
+<body class="bg-black min-h-screen">
+        <div class="container mx-auto flex flex-col items-center justify-center  h-full py-12 space-y-6">
+                <div class="drop-zone w-full max-w-sm flex flex-col items-center border border-pink-800 p-8 space-y-4">
+                    <progress max="100" min="0" value="0" class="progess-bar hidden"></progress>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -960 960 960" width="60px" fill="#EA33F7" class="cursor-pointer"><path d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+                    <input type="file" name="uploaded-images" id="uploaded-image"
+                    accept="image/png,image/jpeg,image/gif"
+                     class="hidden"
+                    >
+                    <button class="border border-pink-600 p-2 rounded-full text-center hover:bg-pink-500 font-semibold clickUpload text-white bg-white">Upload images</button>
+                    <h1 class="text-white font-serif">Drag and drop  Multiple images here.</h1>
+                    
+                </div>
+
+                <div class="images-to-append grid grid-cols-3 items-center place-items-center px-2 gap-4">
+
+
+                </div>
+        </div>
+</body>
+</html>
