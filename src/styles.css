@@ -20,3 +20,7 @@ label{
     @apply text-white font-medium 
 }
 
+.bp{
+    @apply
+    border border-red-700 border-x-4 border-y-4
+}

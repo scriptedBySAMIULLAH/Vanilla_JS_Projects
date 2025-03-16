@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="h-screen  bg-gradient-to-br from-blue-400 to-blue-600 overflow-hidden">
+
+    <div id="errorElement" class="error bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md flex items-center gap-3 text-center w-fit m-auto 
+    -translate-y-full opacity-0 transition-transform duration-500">
+    <i class="fas fa-exclamation-triangle text-2xl"></i>
+    <p class="font-semibold">Unable to get data. Please try again.</p>
+</div>
+
+    
+    <section class="max-w-md w-full bg-white rounded-xl shadow-lg p-6 m-auto data-container ">
+       
+        <div class="container-inputs flex flex-col w-full">
+            <div class="input flex items-center border bg-transparent border-gray-300 rounded-lg overflow-hidden shadow-sm">
+                <input type="text" class="input-element flex-1 p-2 outline-none rounded-lg" placeholder="Enter city name...">
+                <button class="wheather-btn  px-3 py-2 text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="blue">
+                        <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+      
+        <!-- <section class="wheather-container text-center  shadow-sm  p-6 mt-14">
+            
+            <div class="name-flag flex items-center justify-center gap-2">
+                <h1 class="text-xl font-bold">Murree</h1>
+                <img id="countryFlag" alt="Country Flag" class="w-8">
+            </div>
+
+    
+            <div class="icon flex justify-center my-3">
+                <img alt="" class="icon-wheather w-20">
+            </div>
+            <div class="temp text-center">
+                <h1 class="text-4xl font-extrabold text-gray-800">30°C</h1>
+                <p class="text-lg text-gray-600">Clear Sky</p>
+            </div>
+            <div class="conditions grid grid-cols-3 gap-4 mt-5">
+                <div class="card bg-red-100  p-8 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-sm font-medium text-gray-700">Feels Like</h3>
+                    <i class="fas fa-thermometer-half text-xl text-blue-500"></i> 
+                    <h4 class="feels_like text-lg font-semibold">41°C</h4>
+                </div>
+                <div class="card bg-yellow-100 p-8 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-sm font-medium text-gray-700">Humidity</h3>
+                    <i class="fas fa-tint text-xl text-blue-500"></i> 
+                    <h4 class="humidity text-lg font-semibold">41%</h4>
+                </div>
+                <div class="card bg-blue-100 p-8 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-sm font-medium text-gray-700">Clouds</h3>
+                    <i class="fas fa-cloud text-xl text-blue-500"></i>
+                    <h4 class="clouds text-lg font-semibold">41%</h4>
+                </div>
+            </div>
+        </section> -->
+    </section>
+
+</body>
+</html>
