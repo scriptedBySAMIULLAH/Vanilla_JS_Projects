@@ -1,0 +1,32 @@
+.send-btn-bg{
+    background: #ff6600;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-message {
+  
+    animation: fadeIn 0.5s ease-in-out;
+}
+section {
+    background-image: url('./bg.jpg');
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+body
+{
+    background: linear-gradient(135deg, #2E3192, #1BFFFF);
+
+
+}
