@@ -1,4 +1,4 @@
-const apiKey='';
+const apiKey='Put your api key here';
 let inputElement=document.querySelector('.input-element');
 let wheatherBtn=document.querySelector('.wheather-btn');
 let wheatherContainer=document.querySelector('.wheather-container');
@@ -35,7 +35,11 @@ function showError() {
       errorElement.classList.add('-translate-y-full');
       errorElement.classList.add('opacity-1');
   }, 2000);
-  inputElement.value=""
+  inputElement.value="";
+  let previousWeather = document.querySelector('.wheather-container');
+  if (previousWeather) {
+    previousWeather.remove();
+  }
 }
 
 
@@ -52,7 +56,9 @@ const showData= (data,countryCode)=>
   let previousWeather = document.querySelector('.wheather-container');
   if (previousWeather) {
     previousWeather.remove();
-  }console.log(data);
+  }
+  
+  console.log(data);
   
  
   let icon=data.weather[0].icon;
