@@ -53,7 +53,7 @@ const createTodo = (single_task) => {
                          
                             <input ${
                               single_task["isCompleted"] ? "checked" : ""
-                            } type="checkbox" class="bb block checkboxElement appearance-none h-4 w-4 checked:bg-sky-300 checked:ring-gray-100 checked:ring-1 border border-gray-100 rounded-full ml-1 peer">
+                            } type="checkbox" class="bb block checkboxElement appearance-none h-4 w-4 checked:bg-sky-300 checked:ring-gray-100 checked:ring-1 border border-gray-700 rounded-full ml-1 peer">
                            <p class="flex-grow peer-checked:line-through decoration-gray-400 decoration-4"
                         ${
                           !single_task["isCompleted"]
@@ -103,7 +103,7 @@ const checkTaskHandler = (e) => {
     // e.target.closest('.inner-wrapper')
 
     localStorage.setItem("tasks", JSON.stringify(tasks_array));
-    reteriveLocalStorageTask(tasks_array);
+    reteriveLocalStorageTask(tasks_array);  
     count();
   }
 };
@@ -121,9 +121,18 @@ const editContentHandler = (e) => {
     task.isEdited = true;
     localStorage.setItem("tasks", JSON.stringify(tasks_array));
     reteriveLocalStorageTask(tasks_array);
+      console.log(tasks_array);
+
     countRemaining();
   }
 };
+
+const completedTasksCount=(completedTasks)=>{
+
+  isCompleted_Element.textContent= "";
+  isCompleted_Element.textContent= completedTasks.length;
+
+}
 
 const count = () => {
   let total = tasks_array.length;
@@ -132,10 +141,12 @@ const count = () => {
   let completedTasks = tasks_array.filter((ele) => {
     return ele.isCompleted == true;
   });
+  completedTasksCount(completedTasks)
 };
 
 const countRemaining = () => {
   let editedTask = tasks_array.filter((ele) => ele.isEdited == true);
+  remaining_Element.textContent = "";
   remaining_Element.textContent = editedTask.length;
 };
 

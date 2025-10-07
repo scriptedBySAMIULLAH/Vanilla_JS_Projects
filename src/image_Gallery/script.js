@@ -88,7 +88,7 @@ const imageUpdateAuto=(index)=>
       else{
         index=0;
       }
-    }, 2000);
+    }, 1000);
     console.log(intervalId);
 
 }

@@ -68,7 +68,8 @@ const clickHandler = (e) => {
 
     grid_container_Element.innerHTML = `
                    <div class="text-center">
-                <h1 class="sm:font-bold font-semibold text-base sm:text-7xl text-white ">Congratulations,${Player} Wins</h1>
+                <h1 class="sm:font-bold font-semibold text-base sm:text-7xl text-white ">Congratulations,
+              <span class="text-black">${Player=="X"?"John":"Jimmy"}</span>   Wins</h1>
                                         </div>
                  `;
 
@@ -76,7 +77,7 @@ const clickHandler = (e) => {
                    document.querySelector('.p2_wins').textContent=winCount['0'];
                  setTimeout(() => {
                     resetGameHandler()
-                 }, 1000);
+                 }, 2000);
   }
 
 
