@@ -76,14 +76,13 @@ const displayTopAnime = (title, images, score, id) => {
   let innerDiv = document.createElement("div");
   innerDiv.className = "relative outer inline-block";
   innerDiv.innerHTML = `
-        <div class="absolute top-0 left-0 inner "style="width:${Math.round(
-          score * 10
-        )}%;">
+        <div class="absolute top-0 left-0 inner"  style="width:${Math.round(score* 10)}%">
 
         </div>`;
 
-  card.append(h1);
+  ;
   card.append(img);
+  card.append(h1)
   card.append(innerDiv);
 
   top_anime_container_Element.append(card);

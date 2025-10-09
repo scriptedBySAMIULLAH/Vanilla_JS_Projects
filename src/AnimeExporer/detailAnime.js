@@ -80,9 +80,9 @@ const displayAnime = (
           
 
             <!-- Title -->
-            <div class="border border-b-white border-b-2 mb-2 flex flex-col sm:flex-row sm:justify-between border-b border-gray-700 py-2 ">
-              <span class="font-semibold">Title</span>
-              <span class="truncate">${title_english}</span>
+            <div class=" border-b-white border-b-2 mb-2 flex flex-col sm:flex-row sm:justify-between border-b border-gray-700 py-2 ">
+            
+              <span class="truncate" title="${title_english}">${title_english}</span>
             </div>
             
             <!-- Title (Japanese) -->
