@@ -52,7 +52,7 @@ const dragHandler = (e) => {
 };
 const checkValid = (file) => {
   let fileType = file.type;
-  console.log(fileType);
+  // console.log(fileType);
 
   IsvalidFile = validImages.includes(fileType);
 

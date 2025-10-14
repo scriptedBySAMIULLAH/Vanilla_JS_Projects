@@ -14,7 +14,6 @@ const languages = [
   { code: "de", name: "German" },
   { code: "zh-CN", name: "Chinese (Simplified)" },
   { code: "ur", name: "Urdu" },
-  { code: "ps", name: "Pashto (Afghanistan)" },  // Pashto (Afghan national language)
   { code: "tr", name: "Turkish" }
 ];
 const populateLanguages = () => {
@@ -29,16 +28,15 @@ const populateLanguages = () => {
 };
 const loadVoices = () => {
   voices = speechSynthesis.getVoices();
-
-  voices.forEach((voice, index) => {
-    let options_Voice = document.createElement("option");
-    options_Voice.value = voice.name;
-    options_Voice.textContent = `${voice.lang} ${voice.name}`;
-    voice_Element.appendChild(options_Voice);
+   voice_Element.innerHTML = "";
+ voices.forEach(voice => {
+    const option = document.createElement("option");
+    option.value = voice.name;
+    option.textContent = `${voice.name}`;
+    voice_Element.appendChild(option);
   });
 };
 const speak_handler = (translatedText) => {
-  console.log(translatedText);
   if (translatedText) {
     clearTextInput();
     text_input_Element.value = translatedText;
@@ -93,7 +91,6 @@ const clearTextInput = () => {
 
 const volumeHandler = (e) => {
   volumeValue = e.target.value;
-  console.log(volumeValue);
   
   if (volumeValue) {
     current_value_Element.textContent = volumeValue;

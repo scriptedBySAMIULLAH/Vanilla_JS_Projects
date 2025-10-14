@@ -23,7 +23,15 @@ if (detailAnimeId != 0) {
 const extractDetailAnime = (dataObj) => {
   console.log(dataObj);
 
-  let img, title_english, title_japanese, season, episodes, rating, score,duration,airing;
+  let img,
+    title_english,
+    title_japanese,
+    season,
+    episodes,
+    rating,
+    score,
+    duration,
+    airing;
   img = dataObj["images"]["jpg"]["image_url"] ?? "N/A";
 
   title_english = dataObj["title_english"] ?? "N/A";
@@ -66,11 +74,13 @@ const displayAnime = (
   duration,
   airing
 ) => {
-    wrapperElement.innerHTML=""
+  wrapperElement.innerHTML = "";
   wrapperElement.innerHTML = `
     <div class="rounded hidden sm:block relative">
                 <img src="${img}" alt="Image" class="rounded">
-                <span class="inline-block absolute  top-0 right-0 text-lg font-bold bg-opacity-5 animate-pulse">${airing==false?"Not airing":"On Air"}</span>
+                <span class="inline-block absolute  top-0 right-0 text-lg font-bold bg-opacity-5 animate-pulse">${
+                  airing == false ? "Not airing" : "On Air"
+                }</span>
             </div>
 
             <!-- details -->
@@ -123,17 +133,12 @@ const displayAnime = (
 
     `;
 
-    const scoreElement=document.querySelector('.score');
-    if (scoreElement) {
-
-        scoreElement.style.width=`${score*10}%`;
-    }
-  
+  const scoreElement = document.querySelector(".score");
+  if (scoreElement) {
+    scoreElement.style.width = `${score * 10}%`;
+  }
 };
 
-const tabButtonHandler=(e)=>
-{
-
-console.log(e.target);
-
-}
+const tabButtonHandler = (e) => {
+  console.log(e.target);
+};
