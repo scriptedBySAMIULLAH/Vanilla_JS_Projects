@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Random Repository</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body
+    class="bg-[#0d1117] text-gray-200 min-h-screen flex flex-col items-center py-10 font-[Poppins]"
+  >
+    <h1
+      class="flex items-center gap-2 justify-center text-3xl md:text-4xl font-semibold mb-10 text-center bg-gradient-to-r from-[#58a6ff] to-[#00e6e6] bg-clip-text text-transparent drop-shadow-[0_0_10px_#58a6ff80]"
+    >
+      <i data-lucide="github" class="w-8 h-8 text-white"></i>
+      GitHub Random Repository
+    </h1>
+
+    <div
+      class="flex flex-col md:flex-row gap-4 items-center mb-8 w-full max-w-lg"
+    >
+      <select
+        id="languageSelect"
+        class="bg-[#161b22] text-gray-300 border  rounded-md px-4 py-2 focus:outline-none focus:border-[#58a6ff] w-full rounded-md border-gray-500"
+      >
+        <option value="" selected disabled>Select Language</option>
+      </select>
+    </div>
+    <div id="repoContainer" class="w-full  max-w-lg">
+      <!-- <div class= "bg-[#161b22]/60 border border-red-800 rounded-xl p-6 backdrop-blur-md shadow-lg mb-6 card">
+      <h2 class="text-xl font-semibold text-[#58a6ff] hover:text-[#1f6feb] transition-colors">
+        <a href="#" target="_blank">Repository Name</a>
+      </h2>
+      <p class="text-gray-400 mt-2">This is a short description of the repository.</p>
+      <div class="flex flex-wrap gap-4 text-gray-500 text-sm mt-4">
+        <p>⭐ Stars: 1200</p>
+        <p>🍴 Forks: 300</p>
+        <p>🚨 Issues: 12</p>
+      </div>
+    </div> -->
+
+      <p id="message" class="mt-6 text-black text-center border p-8 bg-white font-semibold rounded-md">
+       
+      </p>
+     
+    </div>
+      <button
+        id="refreshBtn"
+        class="hidden X bg-[#1f6feb] hover:bg-[#58a6ff] px-5 py-2 rounded-md text-white font-medium shadow-md hover:shadow-[#58a6ff80] transition-all duration-300 w-fit"
+      >
+        Refresh
+      </button>
+    <!-- this is your gituhb icon  int -->
+    <script>
+      lucide.createIcons();
+    </script>
+
+      <!-- this is your gituhb icon  int ends -->
+    <script src="./app.js"></script>
+  </body>
+</html>
